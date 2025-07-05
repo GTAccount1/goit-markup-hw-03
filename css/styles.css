@@ -1,0 +1,381 @@
+/* Універсальне box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --textcolor: #434455;
+  --iris: #4d5ae5;
+  --ocean: #404bbf;
+  --navy-blue: #2e2f42;
+  --slate: #434455;
+  --light-slate: #8e8f99;
+  --cornflower: #e7e9fc;
+  --cloud: #f4f4fd;
+  --white: #ffffff;
+  --font-family: "Roboto", sans-serif;
+  --second-family: "Raleway", sans-serif;
+}
+
+/* Скидання margin/padding для базових елементів */
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Скидання списків */
+ul {
+  list-style: none;
+}
+
+/* Зображення не виходять за межі */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Покращення читабельності */
+body {
+  max-width: 1440px;
+  font-family: var(--font-family);
+  color: var(--textcolor);
+  background-color: var(--white);
+}
+
+/* Зручна ширина тексту 
+main,
+article,
+section {
+  max-width: 60ch;
+  margin-inline: auto;
+  padding: 1rem;
+}*/
+
+/* Посилання без підкреслення за замовчуванням */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1128px;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 156px;
+  margin-right: 156px;
+}
+
+.header {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--cornflower);
+  padding-top: 24px;
+  padding-bottom: 27px;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-wrapper,
+.menu-list,
+.contacts-list {
+  display: flex;
+}
+
+.menu-list,
+.contacts-list {
+  gap: 40px;
+}
+
+.logo {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--iris);
+  text-decoration: none;
+  margin-right: 76px;
+}
+
+.logo-text-main {
+  color: var(--navy-blue);
+}
+
+.logo-text-footer {
+  color: var(--cloud);
+}
+
+.menu-link {
+  text-decoration: none;
+  color: var(--navy-blue);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.menu-link:hover,
+.menu-link:focus {
+  color: var(--ocean);
+}
+
+.contacts {
+  font-style: normal;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+.contacts-link {
+  text-decoration: none;
+  color: var(--slate);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.contacts-link:hover,
+.contacts-link:focus {
+  color: var(--ocean);
+}
+
+.main-page {
+  background-color: var(--navy-blue);
+}
+
+.main-page .container {
+  padding-top: 188px;
+  padding-bottom: 188px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-page-title {
+  font-size: 56px;
+  line-height: 1.07;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.btn-primary {
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 10px;
+
+  border-radius: 4px;
+  padding: 8px 32px;
+  width: 169px;
+  height: 56px;
+
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  background: var(--iris);
+
+  font-weight: 500;
+  font-size: 16px;
+
+  /* line-height: 24px; */
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--white);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--ocean);
+}
+
+.advantage-page {
+  background-color: var(--white);
+}
+
+.advantage-page .container {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  display: flex;
+}
+
+.advantage-title {
+  display: none;
+}
+
+.advantage-list {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.advantage-item-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--navy-blue);
+  margin-bottom: 8px;
+}
+
+.advantage-item-text {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--slate);
+}
+
+.team-page {
+  background-color: var(--cloud);
+}
+
+.team-page .container {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+
+.team-title {
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--navy-blue);
+
+  text-align: center;
+}
+
+.team-list {
+  background-color: var(--cloud);
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.team-member {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 32px;
+  border-radius: 0 0 4px 4px;
+  padding: 0px 0px 32px 0px;
+  width: 264px;
+  height: 380px;
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  background: var(--white);
+}
+
+.team-member-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  width: 232px;
+  height: 56px;
+}
+
+.team-name {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--navy-blue);
+}
+
+.team-role {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--slate);
+}
+
+.portfolio-page {
+  background-color: var(--white);
+}
+.portfolio-page .container {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.portfolio-title {
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--navy-blue);
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.portfolio-row-a,
+.portfolio-row-b {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.portfolio-item-content {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 16px;
+  gap: 8px;
+  text-align: left;
+}
+
+.portfolio-item-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--navy-blue);
+  margin: 0;
+}
+
+.portfolio-item-descr {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--slate);
+  margin: 0;
+}
+
+.footer {
+  background-color: var(--navy-blue);
+}
+
+.footer .container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-text {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--cloud);
+  margin: 0;
+}
