@@ -215,20 +215,14 @@ a {
 .advantage-page .container {
   display: flex;
 }
-/*
-.advantage-title {
-  display: none;
-}
-*/
 .visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
-  padding: 0;
   margin: -1px;
+  padding: 0;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
   border: 0;
 }
 
@@ -239,7 +233,7 @@ a {
 }
 
 .advantage-item {
-  width: calc((100%-72px) / 4);
+  width: calc((100% - 72px) / 4);
 }
 
 .advantage-item-title {
@@ -391,7 +385,7 @@ a {
   flex-direction: column;
 }
 
-.footer .logo {
+.footer a {
   display: inline-block;
   margin-bottom: 16px;
 }
