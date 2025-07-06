@@ -5,6 +5,19 @@
   box-sizing: border-box;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(100%);
+}
+
 :root {
   --textcolor: #434455;
   --iris: #4d5ae5;
@@ -50,15 +63,6 @@ body {
   background-color: var(--white);
 }
 
-/* Зручна ширина тексту 
-main,
-article,
-section {
-  max-width: 60ch;
-  margin-inline: auto;
-  padding: 1rem;
-}*/
-
 /* Посилання без підкреслення за замовчуванням */
 a {
   text-decoration: none;
@@ -92,11 +96,6 @@ a {
   align-items: center;
   gap: 40px;
 }
-/*
-.menu-list,
-.contacts-list {
-  gap: 40px;
-}*/
 
 .logo {
   font-family: var(--second-family);
@@ -108,6 +107,7 @@ a {
   color: var(--iris);
   text-decoration: none;
   margin-right: 76px;
+  display: inline-block;
 }
 
 .logo-text-main {
@@ -214,18 +214,6 @@ a {
 
 .advantage-page .container {
   display: flex;
-}
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  clip-path: inset(100%);
 }
 
 .advantage-list {
@@ -398,4 +386,5 @@ a {
   letter-spacing: 0.02em;
   color: var(--cloud);
   margin: 0;
+  max-width: 264px;
 }
