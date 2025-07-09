@@ -87,7 +87,6 @@ a {
 .nav-wrapper {
   display: flex;
   align-items: center;
-  gap: 76px;
 }
 .menu-list,
 .contacts-list {
@@ -108,6 +107,9 @@ a {
   display: inline-block;
 }
 
+header .logo {
+  margin-right: 76px;
+}
 .logo-text-main {
   color: var(--navy-blue);
 }
@@ -257,7 +259,7 @@ a {
 }
 
 .team-member-content {
-  padding: 32px;
+  padding: 32px 0;
 }
 
 .team-name {
